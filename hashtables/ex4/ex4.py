@@ -1,15 +1,14 @@
 def has_negatives(a):
-    seen = {}
+    cache = {}
     result = []
 
-    for each in a:
-        seen[each] = None
+    for i in a:
+        cache[i] = None
 
-        if each != 0 and -each in seen:
-            result.append(abs(each))
+        if i != 0 and -i in cache:
+            result.append(abs(i))
 
     return result
-
 
 
 if __name__ == "__main__":
