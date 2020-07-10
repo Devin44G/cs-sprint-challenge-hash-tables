@@ -2,9 +2,16 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    cache = {}
 
+    for arr in arrays:
+        for i in arr:
+            if i not in cache:
+                cache[i] = 0
+            cache[i] += 1
+    result = [item[0] for item in cache.items() if item[1] == len(arrays)]
     return result
+    # print(cache)
 
 
 if __name__ == "__main__":
