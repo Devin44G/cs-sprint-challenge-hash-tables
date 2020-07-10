@@ -1,10 +1,15 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    seen = {}
+    result = []
+
+    for each in a:
+        seen[each] = None
+
+        if each != 0 and -each in seen:
+            result.append(abs(each))
 
     return result
+
 
 
 if __name__ == "__main__":
